@@ -28,36 +28,40 @@ export default {
 
 <template>
   <div class="app">
-    <h1>Calcular Gorjetas</h1>
-    <form action="" class="formGorjeta">
-      <label for="valorConta">Valor da conta:</label>
-      <input name="valorConta" v-model="valor" type="number" />
-      <label for="porcentagemServico">Como foi o serviço?</label>
-      <select v-model="qualidade_selecionada">
-        <option
-          v-for="qualidade of qualidades"
-          :key="qualidade.qualidade"
-          for="select-servico"
-          :value="qualidade.qualidade"
-        >
-          {{ qualidade.servico }}
-        </option></select
-      ><label for="qtdPessoas">Nº de pessoas pagando a conta:</label
-      ><input name="qtdPessoas" type="number" v-model="pessoa" />
-    </form>
+    <div class="center">
+      <h1>Calcular Gorjetas</h1>
+      <form action="" class="formGorjeta">
+        <label for="valorConta">Valor da conta:</label>
+        <input name="valorConta" v-model="valor" type="number" />
+        <label for="porcentagemServico">Como foi o serviço?</label>
+        <select v-model="qualidade_selecionada">
+          <option value="" disabled selected>escolha aqui :)</option>
+          <option
+            v-for="qualidade of qualidades"
+            :key="qualidade.qualidade"
+            for="select-servico"
+            :value="qualidade.qualidade"
+          >
+            {{ qualidade.servico }}
+          </option></select
+        ><label for="qtdPessoas">Nº de pessoas pagando a conta:</label
+        ><input name="qtdPessoas" type="number" v-model="pessoa" />
+      </form>
 
-    <div class="resultado">
-      <h3>Valor da conta:</h3> 
-      <span>R$ {{ valor_final }} por pessoa</span>
+      <div class="resultado">
+        <h3>Valor da conta:</h3>
+        <span>R$ {{ valor_final }} por pessoa</span>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
-.app {
+body {
   display: flex;
+  place-items: center;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 h1 {
   text-align: center;
@@ -65,9 +69,12 @@ h1 {
 
 form {
   padding: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
-input, select {
+input,
+select {
   padding: 1%;
   border-radius: 10px;
 }
