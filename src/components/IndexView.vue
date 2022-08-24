@@ -3,7 +3,7 @@
 <template>
   <div id="app">
     <h1>Calcular Gorjetas</h1>
-    <form action="" class="tipForm">
+    <form action="" class="formGorjeta">
       <label for="valorConta">Valor da conta:</label>
       <input name="valorConta" type="number" />
       <label for="porcentagemServico">Como foi o serviço?</label>
@@ -20,7 +20,7 @@
 
     <div class="resultado">
       Valor da conta:
-      <span class="billValuePerPerson">R$ 0.00 por pessoa</span>
+      <span class="valorContaPorPessoa">R$ 0.00 por pessoa</span>
     </div>
   </div>
 </template>
