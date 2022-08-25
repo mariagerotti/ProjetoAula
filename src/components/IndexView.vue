@@ -29,13 +29,13 @@ export default {
 <template>
   <div class="app">
     <div class="center">
-      <h1>Calcular Gorjetas</h1>
+      <h1>Calcular Gorjetas :)</h1>
       <form action="" class="formGorjeta">
-        <label for="valorConta">Valor da conta:</label>
+        <label for="valorConta"> <p>Valor da conta:</p></label>
         <input name="valorConta" v-model="valor" type="number" />
-        <label for="porcentagemServico">Como foi o serviço?</label>
+        <label for="porcentagemServico"> <p>Como foi o serviço?</p> </label>
         <select v-model="qualidade_selecionada">
-          <option value="" disabled selected>escolha aqui :)</option>
+          <option value="" disabled selected>escolha aqui!</option>
           <option
             v-for="qualidade of qualidades"
             :key="qualidade.qualidade"
@@ -44,7 +44,7 @@ export default {
           >
             {{ qualidade.servico }}
           </option></select
-        ><label for="qtdPessoas">Nº de pessoas pagando a conta:</label
+        ><label for="qtdPessoas"> <p>Nº de pessoas pagando a conta:</p> </label
         ><input name="qtdPessoas" type="number" v-model="pessoa" />
       </form>
 
@@ -57,6 +57,10 @@ export default {
 </template>
 
 <style>
+
+template{
+  background-color: aqua;
+}
 body {
   display: flex;
   place-items: center;
@@ -64,7 +68,12 @@ body {
   justify-content: center;
 }
 h1 {
+  font-family: "Silkscreen", cursive;
   text-align: center;
+}
+
+h3{
+  font-family: "Silkscreen", cursive;
 }
 
 form {
@@ -77,9 +86,14 @@ input,
 select {
   padding: 1%;
   border-radius: 10px;
+  margin: 10px;
 }
 
 .resultado {
   background-color: yellow;
+}
+
+p{
+  font-family: "Silkscreen", cursive;
 }
 </style>
