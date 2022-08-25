@@ -57,17 +57,20 @@ export default {
 </template>
 
 <style>
+#app{ 
+background-color: lavender;
+border-radius: 20px;
 
-template{
-  background-color: aqua;
 }
 body {
   display: flex;
   place-items: center;
   align-items: center;
   justify-content: center;
+  
 }
 h1 {
+  font-size: 35px;
   font-family: "Silkscreen", cursive;
   text-align: center;
 }
@@ -77,20 +80,20 @@ h3{
 }
 
 form {
-  padding: 10%;
+  padding: 8%;
   display: flex;
   flex-direction: column;
 }
 
 input,
 select {
-  padding: 1%;
+  padding: 1.5%;
   border-radius: 10px;
   margin: 10px;
 }
 
 .resultado {
-  background-color: yellow;
+
 }
 
 p{
